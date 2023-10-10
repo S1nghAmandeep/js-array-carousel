@@ -42,3 +42,10 @@ img {
     bottom: 10px
 }
 
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
