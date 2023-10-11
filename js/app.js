@@ -49,6 +49,8 @@ downButton.addEventListener('click', function () {
     if (indexImages < scrollDomElements.length - 1) {
         indexImages++
         console.log(indexImages);
+    } else {
+        indexImages = 0;
     }
     scrollDomElements[indexImages].classList.add('active');
     console.log(scrollDomElements)
@@ -70,6 +72,9 @@ upButton.addEventListener('click', function () {
 
     if (indexImages > 0 ) {
         indexImages--;
+        
+    } else {
+        indexImages = scrollDomElements.length -1;
     }
     console.log(indexImages)
     scrollDomElements[indexImages].classList.add('active');
