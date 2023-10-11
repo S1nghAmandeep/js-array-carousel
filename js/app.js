@@ -1,4 +1,5 @@
-
+// - creare un array 
+//     - inserire tutte le immagini
 const images = [
     './img/01.webp',
     './img/02.webp',
@@ -27,5 +28,52 @@ for (let i = 0; i < images.length; i++) {
 }
 
 const scrollDomElements = document.getElementsByClassName('hide');
+console.log(scrollDomElements)
 
-scrollDomElements[0].classList.add('active')
+let indexImages = 0;
+scrollDomElements[indexImages].classList.add('active')
+
+// - prelevare i pulsanti (down) dal Dom
+const downButton = document.querySelector('.down')
+
+downButton.addEventListener('click', function () {
+    console.log(downButton);
+    
+    let currentImage
+
+    currentImage = scrollDomElements[indexImages]
+    console.log(currentImage);
+    
+    scrollDomElements[indexImages].classList.remove('active');
+
+    if (indexImages < scrollDomElements.length - 1) {
+        indexImages++
+        console.log(indexImages);
+    }
+    scrollDomElements[indexImages].classList.add('active');
+    console.log(scrollDomElements)
+               
+});
+// - prelevare i pulsanti (up) dal Dom
+const upButton = document.querySelector('.up');
+
+upButton.addEventListener('click', function () {
+    console.log(upButton);
+    
+    let currentImage
+
+    currentImage = scrollDomElements[indexImages]
+    console.log(currentImage);
+    
+    currentImage.classList.add('active');
+    scrollDomElements[indexImages].classList.remove('active');
+
+    if (indexImages > 0 ) {
+        indexImages--;
+    }
+    console.log(indexImages)
+    scrollDomElements[indexImages].classList.add('active');
+});
+
+
+
