@@ -11,4 +11,20 @@
     - inserire la concatenazione con innerHtml nel DOM element
 - prelevare la stringa dal Dom
     - creare una stringa prendendo l'elemento tramite nome della classe
-    - applicare la classe per visualizzare l'immagine
+    - applicare la classe (active) per visualizzare l'immagine
+
+- prelevare i pulsanti (down) dal Dom
+    - al pulsante up applicare EventListner
+        - prendere la slide attiva ed applicare la classe (hide)
+        - togliere alla slide la classe active
+            - SE valore del index è minore di elemento.length del DOM - 1
+                - Aumnetare il valore di Index
+        - aggiungere alla slide succesiva la classe active
+
+- prelevare i pulsanti (up) dal Dom
+    - al pulsante up applicare EventListner
+        - prendere la slide attiva ed applicare la classe (hide)
+        - togliere alla slide la classe active
+            - SE valore del index è maggiore di 0
+                - Diminuire il valore di Index
+        - aggiungere alla slide succesiva la classe active
