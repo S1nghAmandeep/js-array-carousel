@@ -25,25 +25,39 @@ img {
     max-width: 100%;
     aspect-ratio: 21/9;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .up, .down {
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50px;
+    color: rgb(53, 52, 52);
     padding: 4px 5px;
     position: absolute;
     border: none;
     cursor: pointer;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .up {
-    left: 50%;
+    
     top: 5px
 }
 
 .down {
-    left: 50%;
     bottom: 10px
+}
+
+
+.down:hover {
+    padding: 6px 7px;
+    transition: 200ms;
+}
+
+.up:hover {
+    padding: 6px 7px;
+    transition: 200ms;
 }
 
 .hide {
