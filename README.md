@@ -19,6 +19,8 @@
         - togliere alla slide la classe active
             - SE valore del index è minore di elemento.length del DOM - 1
                 - Aumnetare il valore di Index
+            - ALTRIMENTI 
+                - il valore del index è = 0
         - aggiungere alla slide succesiva la classe active
 
 - prelevare i pulsanti (up) dal Dom
@@ -27,4 +29,6 @@
         - togliere alla slide la classe active
             - SE valore del index è maggiore di 0
                 - Diminuire il valore di Index
+            - ALTRIMENTI 
+                - il valore del index è uguale a elemento del DOM.lenght - 1
         - aggiungere alla slide succesiva la classe active
