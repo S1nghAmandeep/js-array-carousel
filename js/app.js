@@ -5,7 +5,7 @@ const images = [
     './img/02.webp',
     './img/03.webp',
     './img/04.webp',
-    './img/05.webp',
+    './img/05.webp'
 ]
 
 console.log(images);
@@ -39,16 +39,13 @@ const downButton = document.querySelector('.down')
 downButton.addEventListener('click', function () {
     console.log(downButton);
     
-    let currentImage
-
-    currentImage = scrollDomElements[indexImages]
-    console.log(currentImage);
     
     scrollDomElements[indexImages].classList.remove('active');
 
     if (indexImages < scrollDomElements.length - 1) {
         indexImages++
         console.log(indexImages);
+
     } else {
         indexImages = 0;
     }
@@ -62,12 +59,6 @@ const upButton = document.querySelector('.up');
 upButton.addEventListener('click', function () {
     console.log(upButton);
     
-    let currentImage
-
-    currentImage = scrollDomElements[indexImages]
-    console.log(currentImage);
-    
-    currentImage.classList.add('active');
     scrollDomElements[indexImages].classList.remove('active');
 
     if (indexImages > 0 ) {
